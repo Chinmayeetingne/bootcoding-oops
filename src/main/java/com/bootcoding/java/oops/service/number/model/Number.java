@@ -9,13 +9,7 @@ public class Number {
 
     @Override
     public String toString() {
-        return "Number{" +
-                "num=" + num +
-                ", even='" + even + '\'' +
-                ", primeNo='" + primeNo + '\'' +
-                ", palindrome='" + palindrome + '\'' +
-                ", armstrong='" + armstrong + '\'' +
-                '}';
+        return num + "," + even + "," + palindrome + "," + primeNo + "," + armstrong;
     }
 
     public int getNum() {

@@ -17,10 +17,10 @@ public class NumberApp {
         EvenOddService eos = new EvenOddService();
         PalindromeService ps = new PalindromeService();
         PrimeNumberService pns = new PrimeNumberService();
-       // BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/bootcoding/bootcoding-services/numbers.csv"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Lenovo\\OneDrive\\Desktop\\test files\\file.csv"));
 
         ArrayList<Number> numbers = new ArrayList<>();
-        for(int i = 0; i < 1000; i++){
+        for(int i = 0; i < 50; i++){
 
             Number randomNumber = ns.getRandomNumber();
             eos.evenOdd(randomNumber);
@@ -28,12 +28,12 @@ public class NumberApp {
             pns.primeNumber(randomNumber);
             numbers.add(randomNumber);
         }
-
-        /*for(Number number : numbers) {
+        writer.append("number, even-or-odd, palindrome, primeNo");
+        for(Number number : numbers) {
             writer.write(number.toString());
             writer.write("\n");
         }
         writer.flush();
-        writer.close();*/
+        writer.close();
     }
 }
